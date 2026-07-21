@@ -1,68 +1,80 @@
+@font-face {
+  font-family: "Libre Bodoni";
+  src: url("./assets/fonts/LibreBodoni-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
 
-  font-family: sans-serif;
+  color: #303846;
+  font: 18px/1.5 "Libre Bodoni", serif;
 
-  background-color: #f7f8fa;
+  background: #f0f3f4;
 }
 
-header {
-  /* BEGIN (write your solution here) */
+h2 {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.container {
+  width: 1230px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.column-container {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+.column-4 {
+  width: 23%;
+  margin-bottom: 2%;
+}
+
+.card {
+  /* BEGIN (write your solution here) */
+  position: relative;
+  top: 0;
+  left: 0;
   /* END */
-  padding: 0 50px;
+
+  padding: 30px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  transition: 0.7s;
+}
+
+.card:hover {
+  /* BEGIN (write your solution here) */
+  top: -15px;
+  left: -10px;
+  /* END */
 
   color: #fff;
 
-  background: #00b7a1;
+  background: linear-gradient(45deg, #4158d0, #c850c0 40%, #ffcc70 90%);
+  cursor: pointer;
 }
 
-header .name {
-  box-sizing: border-box;
-  padding: 15px;
+.card h3 {
+  margin-top: 0;
 
-  font-weight: bold;
-  font-size: 20px;
-  text-align: right;
-}
-
-header nav ul {
-  /* BEGIN (write your solution here) */
-  display: flex;
-  /* END */
-  padding: 0;
-
-  list-style: none;
-}
-
-header nav ul li {
-  width: 20%;
-}
-
-main {
-  /* BEGIN (write your solution here) */
-  display: flex;
-  /* END */
-}
-
-section {
-  box-sizing: border-box;
-  padding: 30px 50px;
-}
-
-.aside-block {
-  box-sizing: border-box;
-  height: 100px;
-  padding: 30px 50px;
-}
-
-.w30 {
-  width: 30%;
-}
-
-.w70 {
-  width: 70%;
+  font-size: 1.5em;
 }
